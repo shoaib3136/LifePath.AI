@@ -1,59 +1,61 @@
-## Title of the Project
-Small description about the project like one below
-The integration of a chatbot within a hostel booking system, aimed at streamlining the reservation process for students and improving the overall user experience.
+# Smart Traffic Management for Ambulance Priority
+
+An AI and IoT-based system to create a "green corridor" for ambulances by automatically detecting the vehicle and its siren, then controlling the traffic signal.
 
 ## About
-<!--Detailed Description about the project-->
-Tailored Chatbot for Hostel Booking System is a project designed to integrate a chatbot that leverages advanced natural language processing techniques to understand and respond to user queries to the hostel booking system. Traditional hostel booking processes are often time-consuming and involve manual searches and extensive communication with hostel staff. This project seeks to overcome these challenges by creating an easy-to-use chatbot interface that assists students in addressing inquiries.
+This project, "Smart Traffic Management for Ambulance Priority," is designed to address the critical delays ambulances face at urban intersections. Traditional fixed-timer traffic systems are rigid and cannot adapt to real-time emergencies, leading to increased response times and potential loss of life. Our solution integrates advanced Artificial Intelligence and Internet of Things technologies to create an autonomous system that detects approaching ambulances using a multi-modal approach and dynamically adjusts traffic signals to ensure unimpeded passage. This aims to streamline emergency response and significantly improve patient outcomes.
 
 ## Features
-<!--List the features of the project as shown below-->
-- Implements advance neural network method.
-- A framework based application for deployment purpose.
-- High scalability.
-- Less time complexity.
-- A specific scope of Chatbot response model, using json data format.
+- Implements a **multi-modal AI approach** for robust ambulance detection (combining visual and acoustic analysis).
+- Utilizes **YOLOv5** for efficient real-time object detection of ambulances in video streams.
+- Employs **MFCC + MLP** for accurate siren recognition from audio inputs.
+- Features **decision fusion logic** to prevent false positives by requiring dual confirmation (sight + sound).
+- Integrates with a **NodeMCU (ESP8266)** microcontroller for real-time traffic signal override via relays.
+- Designed for **low-cost and high scalability**, suitable for deployment in urban environments.
+- Enhances emergency response by minimizing ambulance transit time at intersections.
 
 ## Requirements
-<!--List the requirements of the project as shown below-->
-* Operating System: Requires a 64-bit OS (Windows 10 or Ubuntu) for compatibility with deep learning frameworks.
-* Development Environment: Python 3.6 or later is necessary for coding the sign language detection system.
-* Deep Learning Frameworks: TensorFlow for model training, MediaPipe for hand gesture recognition.
-* Image Processing Libraries: OpenCV is essential for efficient image processing and real-time hand gesture recognition.
-* Version Control: Implementation of Git for collaborative development and effective code management.
-* IDE: Use of VSCode as the Integrated Development Environment for coding, debugging, and version control integration.
-* Additional Dependencies: Includes scikit-learn, TensorFlow (versions 2.4.1), TensorFlow GPU, OpenCV, and Mediapipe for deep learning tasks.
+* **Operating System:** Requires a 64-bit OS (Windows 10/11 or Ubuntu Linux) for compatibility with deep learning frameworks and real-time processing.
+* **Development Environment:** Python 3.9 or later is necessary for coding the AI models and the master fusion script. Arduino IDE is required for NodeMCU programming.
+* **Deep Learning Frameworks:** PyTorch (for YOLOv5) and TensorFlow/Keras (for MLP model training) are essential.
+* **Image & Audio Processing Libraries:** OpenCV is crucial for efficient video capture and processing, while Librosa is used for advanced audio feature extraction (MFCCs).
+* **Version Control:** Git for collaborative development and effective code management.
+* **IDE:** VSCode or a similar Integrated Development Environment for coding, debugging, and version control integration.
+* **Hardware Dependencies:** Webcam, Microphone, NodeMCU (ESP8266), 4-channel or 8-channel Relay Module, and LEDs/prototype traffic lights for actuation.
 
 ## System Architecture
-<!--Embed the system architecture diagram as shown below-->
+The system's architecture is a multi-modal, three-tier framework designed for real-time edge processing and IoT-based actuation.
 
-![Screenshot 2023-11-25 133637](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/a60c11f3-0a11-47fb-ac89-755d5f45c995)
-
+![System Architecture Diagram](https://github.com/user-attachments/assets/2f9d3686-5e1c-44f8-9959-5ff2ba101022) 
+*(Note: Replace the placeholder image URL with your actual diagram's URL once uploaded to your repo)*
 
 ## Output
 
-<!--Embed the Output picture at respective places as shown below as shown below-->
-#### Output1 - Name of the output
+### Output 1 - Idle State (Monitoring)
+This image shows the system's operational dashboard when no ambulance is detected. It represents the "normal operation" state of the intersection, displaying live video feed with system status indicators.
 
-![Screenshot 2023-11-25 134037](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/8c2b6b5c-5ed2-4ec4-b18e-5b6625402c16)
 
-#### Output2 - Name of the output
-![Screenshot 2023-11-25 134253](https://github.com/<<yourusername>>/Hand-Gesture-Recognition-System/assets/75235455/5e05c981-05ca-4aaa-aea2-d918dcf25cb7)
 
-Detection Accuracy: 96.7%
-Note: These metrics can be customized based on your actual performance evaluations.
+### Output 2 - Detection State (Override Active)
+This image illustrates the system's dynamic response during a successful multi-modal detection event. An ambulance is detected visually (YOLOv5 bounding box) and acoustically (siren confirmation), leading to the activation of the "green corridor."
 
+![Detection State Output](Gemini_Generated_Image_b3r2s9b3r2s9b3r2.png) 
+*(Note: Replace the placeholder image URL with your actual diagram's URL once uploaded to your repo)*
+
+### Sample Video:
+This video demonstrates the real-time functionality of the system, showing the dynamic detection and traffic light override in action.
+
+[https://github.com/user-attachments/assets/2f9d3686-5e1c-44f8-9959-5ff2ba101022](https://github.com/user-attachments/assets/2f9d3686-5e1c-44f8-9959-5ff2ba101022)
 
 ## Results and Impact
-<!--Give the results and impact as shown below-->
-The Sign Language Detection System enhances accessibility for individuals with hearing and speech impairments, providing a valuable tool for inclusive communication. The project's integration of computer vision and deep learning showcases its potential for intuitive and interactive human-computer interaction.
+The "Smart Traffic Management for Ambulance Priority" system significantly enhances emergency response capabilities in urban environments. By accurately and autonomously prioritizing ambulances, it directly contributes to reducing critical transit times, which can lead to improved patient outcomes and a reduction in preventable loss of life. The project's multi-modal AI approach ensures high reliability and minimizes false triggers, making it a practical and trustworthy solution for real-world deployment.
 
-This project serves as a foundation for future developments in assistive technologies and contributes to creating a more inclusive and accessible digital environment.
+This low-cost, scalable, and reproducible framework serves as a foundational step towards more intelligent and adaptive urban infrastructures. It showcases the immense potential of integrating cutting-edge AI (YOLOv5, MFCC+MLP) with IoT (NodeMCU, relays) to solve critical societal challenges, fostering a safer and more efficient environment for emergency services.
 
 ## Articles published / References
-1. N. S. Gupta, S. K. Rout, S. Barik, R. R. Kalangi, and B. Swampa, “Enhancing Heart Disease Prediction Accuracy Through Hybrid Machine Learning Methods ”, EAI Endorsed Trans IoT, vol. 10, Mar. 2024.
-2. A. A. BIN ZAINUDDIN, “Enhancing IoT Security: A Synergy of Machine Learning, Artificial Intelligence, and Blockchain”, Data Science Insights, vol. 2, no. 1, Feb. 2024.
+1.  M. Usaid, et al., "Ambulance Siren Detection using Artificial Intelligence in Urban Scenarios," *Sir Syed University Research Journal of Engineering & Technology*, vol. 12, no. 1, pp. 92-97, 2022.
+2.  S. Amrutasagar, et al., "Enhanced Emergency Response: YOLOv7-Based Ambulance Detection and Distance Estimation," in *Proceedings of the 2024 International Conference on Intelligent Systems and Co-design (ICISC)*, 2024, pp. 1-6.
+3.  M. Mohsin, et al., "Automatic Priority Analysis of Emergency Response Systems using Internet of Things (IoT) and Machine Learning (ML)," *Transportation Engineering*, vol. 19, no. 3, 2025.
 
-
-
-
+## Document Link:
+[https://docs.google.com/document/d/1UdO7VFjHVId9TRDj_AVljd5JN-Sg7w-w8oKDZ3ip7xk/edit?usp=sharing](https://docs.google.com/document/d/1UdO7VFjHVId9TRDj_AVljd5JN-Sg7w-w8oKDZ3ip7xk/edit?usp=sharing)
