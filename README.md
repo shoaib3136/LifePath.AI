@@ -26,21 +26,21 @@ This project, "Smart Traffic Management for Ambulance Priority," is designed to 
 ## System Architecture
 The system's architecture is a multi-modal, three-tier framework designed for real-time edge processing and IoT-based actuation.
 
-![System Architecture Diagram](https://github.com/user-attachments/assets/2f9d3686-5e1c-44f8-9959-5ff2ba101022) 
-*(Note: Replace the placeholder image URL with your actual diagram's URL once uploaded to your repo)*
+<img width="1027" height="363" alt="image" src="https://github.com/user-attachments/assets/089efd57-8c14-44ac-8f23-44a3a19fa2f0" />
 
 ## Output
 
 ### Output 1 - Idle State (Monitoring)
 This image shows the system's operational dashboard when no ambulance is detected. It represents the "normal operation" state of the intersection, displaying live video feed with system status indicators.
 
+<img width="972" height="799" alt="Gemini_Generated_Image_b3r2s9b3r2s9b3r2 (1)" src="https://github.com/user-attachments/assets/1c26b32c-fb15-471c-9638-f48df77ef0c8" />
 
 
 ### Output 2 - Detection State (Override Active)
 This image illustrates the system's dynamic response during a successful multi-modal detection event. An ambulance is detected visually (YOLOv5 bounding box) and acoustically (siren confirmation), leading to the activation of the "green corridor."
 
-![Detection State Output](Gemini_Generated_Image_b3r2s9b3r2s9b3r2.png) 
-*(Note: Replace the placeholder image URL with your actual diagram's URL once uploaded to your repo)*
+<img width="964" height="785" alt="Gemini_Generated_Image_b3r2s9b3r2s9b3r2" src="https://github.com/user-attachments/assets/19875551-d660-472f-9a9f-48dd55c165d9" />
+
 
 ### Sample Video:
 This video demonstrates the real-time functionality of the system, showing the dynamic detection and traffic light override in action.
